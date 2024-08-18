@@ -1,0 +1,43 @@
+### スケジュールの追加
+POST http://localhost:3000/schedules/add HTTP/1.1
+Content-Type: application/json
+Host: localhost:3000
+
+{
+    "all_day": false,
+    "start_time": "Jun 8 2024 06:35:20 GMT+0900",
+    "end_time": "Jun 9 2024 06:35:20 GMT+0900",
+    "profile_id": "4E4gIEphMfuRpUkkDzoX",
+    "stamp_id": "x1F697",
+    "subject": "プライベート"
+}
+
+### プロファイルの追加
+POST http://localhost:3000/profiles/add HTTP/1.1
+Content-Type: application/json
+Host: localhost:3000
+
+{
+    "label": "テストカレンダー"
+}
+
+### サブスクライブの追加
+POST http://localhost:3000/subscribes/add HTTP/1.1
+Content-Type: application/json
+Host: localhost:3000
+
+{
+    "color": "red",
+    "profile_id": "4E4gIEphMfuRpUkkDzoX",
+    "uid": "7XhHkhmLYg3FRW3BdQXH"
+}
+
+### スケジュールの取得
+GET http://localhost:3000/schedules/date/5kzVa02WLQi699N4Met7/6/2024
+Host: localhost:3000
+User-Agent: vscode-restclient
+
+### ユーザーの検索
+GET http://localhost:3000/users/i/nick
+Host: localhost:3000
+User-Agent: vscode-restclient
